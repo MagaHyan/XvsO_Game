@@ -4,11 +4,10 @@ namespace XvsO_Game
     {
         public enum Player
         {
-            X,O
+            X, O
         }
-
         Player player;
-        Random random=new Random();
+        Random random = new Random();
         int playersWinsCount = 0;
         int computerWinsCount = 0;
         List<Button> buttons;
@@ -17,33 +16,31 @@ namespace XvsO_Game
             InitializeComponent();
             StartNewGame();
         }
-
         private void playerClick(object sender, EventArgs e)
         {
             var button = (Button)sender;
-            player=Player.X;
-            button.Text = player.ToString(); 
-            button.Enabled=false;
-            button.BackColor=System.Drawing.Color.OrangeRed;
+            player = Player.X;
+            button.Text = player.ToString();
+            button.Enabled = false;
+            button.BackColor = System.Drawing.Color.OrangeRed;
             buttons.Remove(button);
-            Check();
+            CheckWin();
             Timer.Start();
+            player = Player.O;
         }
-
         private void ComputerClick(object sender, EventArgs e)
         {
             if (buttons.Count > 0)
             {
                 int index = random.Next(buttons.Count);
-                player = Player.O; 
                 buttons[index].Text = player.ToString();
-                buttons[index].Enabled=false;
-                buttons[index].BackColor=System.Drawing.Color.Crimson;
+                buttons[index].Enabled = false;
+                buttons[index].BackColor = System.Drawing.Color.Crimson;
                 buttons.RemoveAt(index);
-                Check();
-                Timer.Stop();
+                CheckWin();
+                player = Player.X;
+                Timer.Stop();  
             }
-            
         }
         private void button10_Click(object sender, EventArgs e)
         {
@@ -53,38 +50,45 @@ namespace XvsO_Game
             ComputerWinsCount.Text = computerWinsCount.ToString();
             PlayerWinsCount.Text = playersWinsCount.ToString();
         }
-        
-        private void Check()
+        private void CheckWin()//lav sencel kasxhati:))
         {
-            if (button1.Text == "X" && button2.Text == "X" && button3.Text == "X" ||
-               button4.Text == "X" && button5.Text == "X" && button6.Text == "X" ||
-               button7.Text == "X" && button8.Text == "X" && button9.Text == "X" ||
-               button1.Text == "X" && button4.Text == "X" && button7.Text == "X" ||
-               button2.Text == "X" && button5.Text == "X" && button8.Text == "X" ||
-               button3.Text == "X" && button6.Text == "X" && button9.Text == "X" ||
-               button1.Text == "X" && button5.Text == "X" && button9.Text == "X" ||
-               button3.Text == "X" && button5.Text == "X" && button7.Text == "X")
+            if (button1.Text == player.ToString() && button2.Text == player.ToString() && button3.Text == player.ToString() ||
+               button4.Text == player.ToString() && button5.Text == player.ToString() && button6.Text == player.ToString() ||
+               button7.Text == player.ToString() && button8.Text == player.ToString() && button9.Text == player.ToString() ||
+               button1.Text == player.ToString() && button4.Text == player.ToString() && button7.Text == player.ToString() ||
+               button2.Text == player.ToString() && button5.Text == player.ToString() && button8.Text == player.ToString() ||
+               button3.Text == player.ToString() && button6.Text == player.ToString() && button9.Text == player.ToString() ||
+               button1.Text == player.ToString() && button5.Text == player.ToString() && button9.Text == player.ToString() ||
+               button3.Text == player.ToString() && button5.Text == player.ToString() && button7.Text == player.ToString())
             {
                 Timer.Stop();
-                MessageBox.Show("Congretion!! You Win.");
-                playersWinsCount++;
-                PlayerWinsCount.Text = playersWinsCount.ToString();
-                StartNewGame();
+                if (player == Player.X)
+                {
+                    MessageBox.Show("Congrats!! You Win.");
+                    playersWinsCount++;
+                    PlayerWinsCount.Text = playersWinsCount.ToString();
+                    StartNewGame();
+                }
+                else
+                {
+                    MessageBox.Show("Oyy... You are loser :(");
+                    computerWinsCount++;
+                    ComputerWinsCount.Text = computerWinsCount.ToString();
+                    StartNewGame();
+                }
             }
-            else if (button1.Text == "O" && button2.Text == "O" && button3.Text == "O" ||
-               button4.Text == "O" && button5.Text == "O" && button6.Text == "O" ||
-               button7.Text == "O" && button8.Text == "O" && button9.Text == "O" ||
-               button1.Text == "O" && button4.Text == "O" && button7.Text == "O" ||
-               button2.Text == "O" && button5.Text == "O" && button8.Text == "O" ||
-               button3.Text == "O" && button6.Text == "O" && button9.Text == "O" ||
-               button1.Text == "O" && button5.Text == "O" && button9.Text == "O" ||
-               button3.Text == "O" && button5.Text == "O" && button7.Text == "O")
+            else
             {
-                Timer.Stop();
-                MessageBox.Show("Oyy... You are loser :(");
-                playersWinsCount++;
-                ComputerWinsCount.Text = computerWinsCount.ToString();
-                StartNewGame();
+                if (buttons.Count == 0)
+                {
+                    MessageBox.Show(" Tie!!!Start a new Game ");
+                    Thread.Sleep(2000);
+                    playersWinsCount++;
+                    computerWinsCount++;
+                    ComputerWinsCount.Text = computerWinsCount.ToString();
+                    PlayerWinsCount.Text = playersWinsCount.ToString();
+                    StartNewGame();
+                }
             }
         }
         private void StartNewGame()

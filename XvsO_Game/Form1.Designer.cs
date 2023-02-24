@@ -28,197 +28,197 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.PlayerWinsCount = new System.Windows.Forms.Label();
-            this.ComputerWinsCount = new System.Windows.Forms.Label();
-            this.Timer = new System.Windows.Forms.Timer(this.components);
-            this.SuspendLayout();
+            components = new System.ComponentModel.Container();
+            button1 = new Button();
+            button2 = new Button();
+            button3 = new Button();
+            button4 = new Button();
+            button5 = new Button();
+            button6 = new Button();
+            button7 = new Button();
+            button8 = new Button();
+            button9 = new Button();
+            button10 = new Button();
+            label1 = new Label();
+            label2 = new Label();
+            PlayerWinsCount = new Label();
+            ComputerWinsCount = new Label();
+            Timer = new System.Windows.Forms.Timer(components);
+            SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(143, 115);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(70, 70);
-            this.button1.TabIndex = 0;
-            this.button1.UseVisualStyleBackColor = true;
+            button1.Location = new Point(143, 115);
+            button1.Name = "button1";
+            button1.Size = new Size(70, 70);
+            button1.TabIndex = 0;
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += playerClick;
+            button1.Click += ComputerClick;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(211, 115);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(70, 70);
-            this.button2.TabIndex = 1;
-            this.button2.UseVisualStyleBackColor = true;
+            button2.Location = new Point(211, 115);
+            button2.Name = "button2";
+            button2.Size = new Size(70, 70);
+            button2.TabIndex = 1;
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += playerClick;
+            button2.Click += ComputerClick;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(279, 115);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(70, 70);
-            this.button3.TabIndex = 2;
-            this.button3.UseVisualStyleBackColor = true;
+            button3.Location = new Point(279, 115);
+            button3.Name = "button3";
+            button3.Size = new Size(70, 70);
+            button3.TabIndex = 2;
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += playerClick;
+            button3.Click += ComputerClick;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(143, 182);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(70, 70);
-            this.button4.TabIndex = 3;
-            this.button4.UseVisualStyleBackColor = true;
+            button4.Location = new Point(143, 182);
+            button4.Name = "button4";
+            button4.Size = new Size(70, 70);
+            button4.TabIndex = 3;
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += playerClick;
+            button4.Click += ComputerClick;
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(211, 182);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(70, 70);
-            this.button5.TabIndex = 4;
-            this.button5.UseVisualStyleBackColor = true;
+            button5.Location = new Point(211, 182);
+            button5.Name = "button5";
+            button5.Size = new Size(70, 70);
+            button5.TabIndex = 4;
+            button5.UseVisualStyleBackColor = true;
+            button5.Click += playerClick;
+            button5.Click += ComputerClick;
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(279, 182);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(70, 70);
-            this.button6.TabIndex = 5;
-            this.button6.UseVisualStyleBackColor = true;
+            button6.Location = new Point(279, 182);
+            button6.Name = "button6";
+            button6.Size = new Size(70, 70);
+            button6.TabIndex = 5;
+            button6.UseVisualStyleBackColor = true;
+            button6.Click += playerClick;
+            button6.Click += ComputerClick;
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(143, 250);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(70, 70);
-            this.button7.TabIndex = 6;
-            this.button7.UseVisualStyleBackColor = true;
+            button7.Location = new Point(143, 250);
+            button7.Name = "button7";
+            button7.Size = new Size(70, 70);
+            button7.TabIndex = 6;
+            button7.UseVisualStyleBackColor = true;
+            button7.Click += playerClick;
+            button7.Click += ComputerClick;
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(211, 250);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(70, 70);
-            this.button8.TabIndex = 7;
-            this.button8.UseVisualStyleBackColor = true;
+            button8.Location = new Point(211, 250);
+            button8.Name = "button8";
+            button8.Size = new Size(70, 70);
+            button8.TabIndex = 7;
+            button8.UseVisualStyleBackColor = true;
+            button8.Click += playerClick;
+            button8.Click += ComputerClick;
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(279, 250);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(70, 70);
-            this.button9.TabIndex = 8;
-            this.button9.UseVisualStyleBackColor = true;
+            button9.Location = new Point(279, 250);
+            button9.Name = "button9";
+            button9.Size = new Size(70, 70);
+            button9.TabIndex = 8;
+            button9.UseVisualStyleBackColor = true;
+            button9.Click += playerClick;
+            button9.Click += ComputerClick;
+
             // 
             // button10
             // 
-            this.button10.BackColor = System.Drawing.Color.Pink;
-            this.button10.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button10.ForeColor = System.Drawing.Color.MediumVioletRed;
-            this.button10.Location = new System.Drawing.Point(318, 397);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(163, 40);
-            this.button10.TabIndex = 9;
-            this.button10.Text = "Start New Game";
-            this.button10.UseVisualStyleBackColor = false;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
+            button10.BackColor = Color.Pink;
+            button10.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            button10.ForeColor = Color.MediumVioletRed;
+            button10.Location = new Point(318, 397);
+            button10.Name = "button10";
+            button10.Size = new Size(163, 40);
+            button10.TabIndex = 9;
+            button10.Text = "Start New Game";
+            button10.UseVisualStyleBackColor = false;
+            button10.Click += button10_Click;
+            
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 23);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Player Wins";
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.OrangeRed;
+            label1.Location = new Point(12, 9);
+            label1.Name = "label1";
+            label1.Size = new Size(99, 23);
+            label1.TabIndex = 10;
+            label1.Text = "Player Wins";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.Crimson;
-            this.label2.Location = new System.Drawing.Point(354, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(129, 23);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Computer Wins";
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor = Color.Crimson;
+            label2.Location = new Point(354, 9);
+            label2.Name = "label2";
+            label2.Size = new Size(129, 23);
+            label2.TabIndex = 11;
+            label2.Text = "Computer Wins";
             // 
             // PlayerWinsCount
             // 
-            this.PlayerWinsCount.AutoSize = true;
-            this.PlayerWinsCount.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.PlayerWinsCount.ForeColor = System.Drawing.Color.OrangeRed;
-            this.PlayerWinsCount.Location = new System.Drawing.Point(117, 9);
-            this.PlayerWinsCount.Name = "PlayerWinsCount";
-            this.PlayerWinsCount.Size = new System.Drawing.Size(19, 23);
-            this.PlayerWinsCount.TabIndex = 12;
-            this.PlayerWinsCount.Text = "0";
+            PlayerWinsCount.AutoSize = true;
+            PlayerWinsCount.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            PlayerWinsCount.ForeColor = Color.OrangeRed;
+            PlayerWinsCount.Location = new Point(117, 9);
+            PlayerWinsCount.Name = "PlayerWinsCount";
+            PlayerWinsCount.Size = new Size(19, 23);
+            PlayerWinsCount.TabIndex = 12;
+            PlayerWinsCount.Text = "0";
             // 
             // ComputerWinsCount
             // 
-            this.ComputerWinsCount.AutoSize = true;
-            this.ComputerWinsCount.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.ComputerWinsCount.ForeColor = System.Drawing.Color.Red;
-            this.ComputerWinsCount.Location = new System.Drawing.Point(336, 9);
-            this.ComputerWinsCount.Name = "ComputerWinsCount";
-            this.ComputerWinsCount.Size = new System.Drawing.Size(19, 23);
-            this.ComputerWinsCount.TabIndex = 13;
-            this.ComputerWinsCount.Text = "0";
+            ComputerWinsCount.AutoSize = true;
+            ComputerWinsCount.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            ComputerWinsCount.ForeColor = Color.Red;
+            ComputerWinsCount.Location = new Point(336, 9);
+            ComputerWinsCount.Name = "ComputerWinsCount";
+            ComputerWinsCount.Size = new Size(19, 23);
+            ComputerWinsCount.TabIndex = 13;
+            ComputerWinsCount.Text = "0";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Pink;
-            this.ClientSize = new System.Drawing.Size(482, 453);
-            this.Controls.Add(this.ComputerWinsCount);
-            this.Controls.Add(this.PlayerWinsCount);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button10);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Name = "Form1";
-            this.Text = "Game X/O";
-            this.ResumeLayout(false);
-            this.PerformLayout();
-            this.button1.Click += new System.EventHandler(this.playerClick);
-            this.button2.Click += new System.EventHandler(this.playerClick);
-            this.button3.Click += new System.EventHandler(this.playerClick);
-            this.button4.Click += new System.EventHandler(this.playerClick);
-            this.button5.Click += new System.EventHandler(this.playerClick);
-            this.button6.Click += new System.EventHandler(this.playerClick);
-            this.button7.Click += new System.EventHandler(this.playerClick);
-            this.button8.Click += new System.EventHandler(this.playerClick);
-            this.button9.Click += new System.EventHandler(this.playerClick);
-            this.button1.Click += new System.EventHandler(this.ComputerClick);
-            this.button2.Click += new System.EventHandler(this.ComputerClick);
-            this.button3.Click += new System.EventHandler(this.ComputerClick);
-            this.button4.Click += new System.EventHandler(this.ComputerClick);
-            this.button5.Click += new System.EventHandler(this.ComputerClick);
-            this.button6.Click += new System.EventHandler(this.ComputerClick);
-            this.button7.Click += new System.EventHandler(this.ComputerClick);
-            this.button8.Click += new System.EventHandler(this.ComputerClick);
-            this.button9.Click += new System.EventHandler(this.ComputerClick);
-            this.Check();
-            this.StartNewGame();
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Pink;
+            ClientSize = new Size(482, 453);
+            Controls.Add(ComputerWinsCount);
+            Controls.Add(PlayerWinsCount);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(button10);
+            Controls.Add(button9);
+            Controls.Add(button8);
+            Controls.Add(button7);
+            Controls.Add(button6);
+            Controls.Add(button5);
+            Controls.Add(button4);
+            Controls.Add(button3);
+            Controls.Add(button2);
+            Controls.Add(button1);
+            Name = "Form1";
+            Text = "Game X/O";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
